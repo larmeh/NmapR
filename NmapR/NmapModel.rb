@@ -12,8 +12,8 @@ class NmapModel
             nmap.os_fingerprint = false
             ##
             
-            nmap.service_scan = true
-            nmap.verbose = false
+            nmap.service_scan = service_scan
+            nmap.verbose = verbose
             nmap.xml = true
             nmap.ports = ports
             nmap.targets = targets
