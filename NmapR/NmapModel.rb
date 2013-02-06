@@ -9,7 +9,7 @@ class NmapModel
     FILENAME = "scan.xml"
     
     def scan_it()
-        Nmap::Program.scan do |nmap|
+        success = Nmap::Program.scan do |nmap|
             ## these are disabled since they require root
             nmap.syn_scan = false
             nmap.os_fingerprint = false
@@ -23,7 +23,11 @@ class NmapModel
             nmap.skip_discovery = skip_discovery
         end
         
-        parse_it()
+        if success
+            parse_it()
+        else
+            return false
+        end
     end
     
     def parse_it()
