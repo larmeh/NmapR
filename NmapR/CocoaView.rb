@@ -10,4 +10,7 @@ require 'osx/cocoa'
 OSX.require_framework 'CoreData'
 
 class CocoaView < OSX::NSView
+    ib_action :helloWorld do
+        print "Moin"
+    end
 end
