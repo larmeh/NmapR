@@ -17,6 +17,7 @@
 		0758073516C2D27B00D51C6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0758073316C2D27B00D51C6B /* MainMenu.xib */; };
 		0758073816C2D27B00D51C6B /* NmapR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0758073616C2D27B00D51C6B /* NmapR.xcdatamodeld */; };
 		0758073F16C2D29300D51C6B /* CocoaView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0758073E16C2D29300D51C6B /* CocoaView.rb */; };
+		ADCB4FE416C2D63000A792E4 /* NmapModel.rb in Resources */ = {isa = PBXBuildFile; fileRef = ADCB4FE316C2D63000A792E4 /* NmapModel.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0758073416C2D27B00D51C6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0758073716C2D27B00D51C6B /* NmapR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NmapR.xcdatamodel; sourceTree = "<group>"; };
 		0758073E16C2D29300D51C6B /* CocoaView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CocoaView.rb; sourceTree = "<group>"; };
+		ADCB4FE316C2D63000A792E4 /* NmapModel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NmapModel.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		0758072316C2D27B00D51C6B /* NmapR */ = {
 			isa = PBXGroup;
 			children = (
+				ADCB4FE316C2D63000A792E4 /* NmapModel.rb */,
 				0758073116C2D27B00D51C6B /* AppDelegate.rb */,
 				0758073E16C2D29300D51C6B /* CocoaView.rb */,
 				0758073316C2D27B00D51C6B /* MainMenu.xib */,
@@ -170,6 +173,7 @@
 				0758073216C2D27B00D51C6B /* AppDelegate.rb in Resources */,
 				0758073516C2D27B00D51C6B /* MainMenu.xib in Resources */,
 				0758073F16C2D29300D51C6B /* CocoaView.rb in Resources */,
+				ADCB4FE416C2D63000A792E4 /* NmapModel.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 				0758073D16C2D27B00D51C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
