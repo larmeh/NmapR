@@ -16,6 +16,7 @@
 		0758073216C2D27B00D51C6B /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0758073116C2D27B00D51C6B /* AppDelegate.rb */; };
 		0758073516C2D27B00D51C6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0758073316C2D27B00D51C6B /* MainMenu.xib */; };
 		0758073816C2D27B00D51C6B /* NmapR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0758073616C2D27B00D51C6B /* NmapR.xcdatamodeld */; };
+		0758073F16C2D29300D51C6B /* CocoaView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0758073E16C2D29300D51C6B /* CocoaView.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0758073116C2D27B00D51C6B /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		0758073416C2D27B00D51C6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0758073716C2D27B00D51C6B /* NmapR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NmapR.xcdatamodel; sourceTree = "<group>"; };
+		0758073E16C2D29300D51C6B /* CocoaView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CocoaView.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				0758072316C2D27B00D51C6B /* NmapR */,
-				0758071A16C2D27B00D51C6B /* Frameworks */,
 				0758071916C2D27B00D51C6B /* Products */,
+				0758071A16C2D27B00D51C6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				0758073116C2D27B00D51C6B /* AppDelegate.rb */,
+				0758073E16C2D29300D51C6B /* CocoaView.rb */,
 				0758073316C2D27B00D51C6B /* MainMenu.xib */,
 				0758073616C2D27B00D51C6B /* NmapR.xcdatamodeld */,
 				0758072416C2D27B00D51C6B /* Supporting Files */,
@@ -166,6 +169,7 @@
 				0758073016C2D27B00D51C6B /* rb_main.rb in Resources */,
 				0758073216C2D27B00D51C6B /* AppDelegate.rb in Resources */,
 				0758073516C2D27B00D51C6B /* MainMenu.xib in Resources */,
+				0758073F16C2D29300D51C6B /* CocoaView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
