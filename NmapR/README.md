@@ -1,5 +1,8 @@
 NmapR
 
+Frontend for nmap using RubyCocoa and ruby-nmap.
+
+
 Requirements:
 
     - gem 'ruby-nmap' 
