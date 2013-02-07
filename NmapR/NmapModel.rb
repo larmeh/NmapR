@@ -37,9 +37,8 @@ class NmapModel < OSX::NSObject
                 
     			host.each_port do |port|
       				@result.push("  #{port.number}/#{port.protocol}\t#{port.state}\t#{port.service}\n")
-    			end
-  			end
-		end
-        
+                end
+            end
+        end
     end
 end
