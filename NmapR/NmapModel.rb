@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nmap/program'
 
-class NmapModel
+class NmapModel < OSX::NSObject
 
     attr_accessor :targets, :ports, :service_scan, :verbose, :skip_discovery
     
@@ -21,5 +21,6 @@ class NmapModel
         end
         
     end
-
+    
+    
 end
