@@ -10,8 +10,14 @@ require 'osx/cocoa'
 OSX.require_framework 'CoreData'
 
 class AppDelegate < OSX::NSObject
-    ib_outlets :window, :hosts, :prefix, :port, :ping, :verboseOutput, :resultText, :progress
+    ib_outlets :window, :scan_button, :reset_button, :host_text_field, :prefix_text_field, :port_text_field, :ping_checkbox, :verbose_checkbox, :result_table, :progress_indicator, :result_data_source
     attr_reader :persistentStoreCoordinator, :managedObjectModel, :managedObjectContext
+
+    def initialize
+        @nmap_model = NmapModel.new()
+        @result_data_source = [[]]
+    end
+
 
     def applicationDidFinishLaunching_(notification)
     end
@@ -174,22 +180,44 @@ class AppDelegate < OSX::NSObject
         return OSX::NSTerminateNow
     end
 
+    # NSTextField delegate
+
+    def controlTextDidChange(note)
+        hosts = @host_text_field.stringValue.to_s
+        prefix = @prefix_text_field
+    end
+
+
+    # NSTableView delegate methods
+    def tableView_objectValueForTableColumn_row(sender, col, row)
+        if col == @result_table.tableColumns.to_a[0]
+            @result_data_source[row][0]
+        else
+            @result_data_source[row][1]
+        end
+    end
+
+    def numberOfRowsInTableView(sender)
+        @result_data_source.length
+    end
+
     ib_action :onScan do
-        message = "Starting scan"
-        OSX::NSLog(message)
-        @progress.startAnimation(self)
-        s = @resultText.stringValue.to_s
-        OSX::NSLog(s)
+        OSX::NSLog("Starting scan")
+        @scan_button.setTitle("Stop")
+        @progress_indicator.startAnimation(self)
+        @result_data_source[0][0] = "127.0.0.1"
+        @result_data_source[0][1] = "22"
+        # Call scan on model here
+        sleep(1.0)
+        @result_data_source.sort! {|a,b| a[0].upcase <=> b[0].upcase }
+        @result_table.reloadData
+        @progress_indicator.stopAnimation(self)
+        @scan_button.setTitle("Scan")
+        OSX::NSLog("Scan done")
     end
 
     ib_action :onReset do
         OSX::NSLog("Resetting values")
     end
-
-    ib_action :onResult do
-        @resultText.setStringValue('Blah')
-    end
-
-
 end
 
