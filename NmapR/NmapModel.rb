@@ -2,8 +2,7 @@ require 'rubygems'
 require 'nmap/program'
 require 'nmap/xml'
 
-class NmapModel
-    
+class NmapModel < OSX::NSObject
     attr_accessor :targets, :ports, :service_scan, :verbose, :skip_discovery, :result
     
     FILENAME = "scan.xml"
@@ -43,5 +42,4 @@ class NmapModel
 		end
         
     end
-    
 end
