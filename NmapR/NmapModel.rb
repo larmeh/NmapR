@@ -35,7 +35,7 @@ class NmapModel < OSX::NSObject
             xml.each_host do |host|
     			@result.push("[#{host.ip}]\n")
                 
-    			host.each_port do |port|
+                host.each_port do |port|
                     @result.push("  #{port.number}/#{port.protocol}\t#{port.state}\t#{port.service}\n")
                 end
             end
