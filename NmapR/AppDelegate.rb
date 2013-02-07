@@ -208,7 +208,8 @@ class AppDelegate < OSX::NSObject
         @result_data_source[0][0] = "127.0.0.1"
         @result_data_source[0][1] = "22"
         # Call scan on model here
-        sleep(1.0)
+        #sleep(1.0)
+        @nmap_model.scan_it()
         @result_data_source.sort! {|a,b| a[0].upcase <=> b[0].upcase }
         @result_table.reloadData
         @progress_indicator.stopAnimation(self)
