@@ -14,7 +14,6 @@ class AppDelegate < OSX::NSObject
     attr_reader :persistentStoreCoordinator, :managedObjectModel, :managedObjectContext
 
     def applicationDidFinishLaunching_(notification)
-        @resultText = []
     end
 
     # Returns the directory the application uses to store the Core Data store
@@ -115,15 +114,10 @@ class AppDelegate < OSX::NSObject
         return @managedObjectContext
     end
 
-    # Returns the NSUndoManager for the application. In this case, the manager
-    # returned is that of the managed object context for the application.
     def windowWillReturnUndoManager_(window)
         return self.managedObjectContext.undoManager
     end
 
-    # Performs the save action for the application, which is to send the save:
-    # message to the application's managed object context. Any encountered
-    # errors are presented to the user.
     def saveAction_(sender)
         error = nil
 
@@ -155,7 +149,6 @@ class AppDelegate < OSX::NSObject
 
         ok, error = self.managedObjectContext.save_
         if ok
-            # Customize this code block to include application-specific recovery steps.
             result = sender.presentError(error)
             if result
                 return OSX::NSTerminateCancel
@@ -182,9 +175,11 @@ class AppDelegate < OSX::NSObject
     end
 
     ib_action :onScan do
-       message = "Starting scan @hosts @prefix @ports"
-       OSX::NSLog(message)
-       @progress.startAnimation(self)
+        message = "Starting scan"
+        OSX::NSLog(message)
+        @progress.startAnimation(self)
+        s = @resultText.stringValue.to_s
+        OSX::NSLog(s)
     end
 
     ib_action :onReset do
